@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <title>Friend Finder Survey</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Celebrity Friend Finder Survey</title>
+  </head>
 
 <body>
   <div class="container">
@@ -161,7 +161,7 @@
     <hr>
     <footer class="footer">
       <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href=>GitHub
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/JoeySuc89/Friend-Finder">GitHub
             Repo</a></p>
       </div>
     </footer>
@@ -214,17 +214,23 @@
             $("#q10").val()
           ]
         };
-        var currentURL = window.location.origin;
-        $.post(currentURL + "/api/friends", userData, function(data) {
-          $("#matchName").text(data.name);
-          $("#matchImg").attr("src", data.photo);
-          $("#resultsModal").modal("toggle");
+
+        $.post("/api/friends", userData, function(data) {
+          console.log(data);
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+          $("#results-modal").modal("toggle");
         });
       } else {
         alert("Please fill out all fields before submitting!");
       }
-      return false;
+      return false;   
+      $("#name").val("");
+      $("#photo").val("");
+      $("#userScores").val("");
+
     });
+      
   </script>
 </body>
 

@@ -33,7 +33,7 @@ module.exports = function(app){
      console.log(friends[i].name);
       totalDifference = 0;  
       
-      var bfriendScore = friends[i].scores.reduce((a,b) + a + b, 0);
+      var bfriendScore = friends[i].scores.reduce((a,b) => a + b, 0);
       console.log("Total friend score " + bfriendScore);
       totalDifference += Math.abs(sum - bfriendScore);
       console.log("------------------++++++++++++++++++++")
@@ -49,7 +49,7 @@ module.exports = function(app){
     friends.push(userData);
     console.log("New User Added");
     console.log(userData);
-    res.join(bestMatch);
+    res.json(bestMatch);
   });
 };
 

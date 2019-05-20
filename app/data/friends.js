@@ -1,19 +1,53 @@
 var friendsArray = [
     {
-      "name":"Ahmed",
-      "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-      "scores":[
-          5,
-          1,
-          4,
-          4,
-          5,
-          1,
-          2,
-          5,
-          4,
-          1
-        ]
+      name:"Joey",
+      photo:"https://joeysuc89.github.io/My-Portfolio/assets/images/FB_IMG_1542895725039.jpg",
+      scores:[5,1,4,4,5,1,2,5,4,1]
+    },
+    {
+       name: "Mark Hamill",
+       photo: "https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.gstatic.com%2Ftv%2Fthumb%2Fpersons%2F73414%2F73414_v9_bb.jpg&imgrefurl=http%3A%2F%2Fgoogle.com%2Fsearch%3Ftbm%3Disch%26q%3DMark%2BHamill&docid=cRG2wXyefDXGeM&tbnid=tm9IK0bC4NBZVM%3A&vet=10ahUKEwj8hpr_jKniAhViUd8KHbejAHwQMwhpKAAwAA..i&w=1080&h=1440&itg=1&bih=657&biw=1366&q=mark%20hamill&ved=0ahUKEwj8hpr_jKniAhViUd8KHbejAHwQMwhpKAAwAA&iact=mrc&uact=8",
+       scores: [4,3,5,1,5,3,2,3,4,1]
+    },
+    {
+       name: "Ben McKenzie",
+       photo: "http://www.gstatic.com/tv/thumb/persons/272111/272111_v9_ba.jpg",
+       scores: [2,3,5,1,2,1,4,3,5,3]
+    },
+    {
+        name: "Johnny Depp",
+        photo: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjMypX4jqniAhWkTN8KHTDJAxYQjRx6BAgBEAU&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3D%252Furl%253Fsa%253Di%2526source%253Dimages%2526cd%253D%2526ved%253D2ahUKEwjP5bv1jqniAhUCTt8KHcgpAT0QjRx6BAgBEAU%2526url%253Dhttp%25253A%25252F%25252Fgoogle.com%25252Fsearch%25253Ftbm%25253Disch%252526q%25253DOprah%25252BNoodlemantra%2526psig%253DAOvVaw1GRRa-8I3YmwgMNnwAfYdh%2526ust%253D1558407617550920%26psig%3DAOvVaw1GRRa-8I3YmwgMNnwAfYdh%26ust%3D1558407617550920&psig=AOvVaw1GRRa-8I3YmwgMNnwAfYdh&ust=1558407617550920",
+        scores: [4,2,2,5,5,3,1,4,5,2]
+     },
+     {
+        name: "Jennifer Aniston",
+        photo: "https://s3.r29static.com//bin/entry/a87/720x864,85/2087892/image.webp",
+        scores: [3,1,4,5,3,2,3,2,4,5]
+     },
+     {
+         name: "Mariah Carey",
+         photo: "https://pixel.nymag.com/imgs/daily/vulture/2019/01/17/17-mariah-carey.w330.h330.jpg",
+         scores: [1,2,3,4,5,4,3,2,1,5]
+     },
+     {
+        name: "Drew Barrymore",
+        photo: "data:image/jpeg;base64,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",
+        scores: [1,4,5,4,3,4,3,2,3,4,2]
+    },
+    {
+        name: "Alexandra Daddario",
+        photo: "https://m.media-amazon.com/images/M/MV5BMTY3Nzg2NjA1OF5BMl5BanBnXkFtZTgwMjY5NTU1MzI@._V1_UY317_CR10,0,214,317_AL_.jpg",
+        scores: [3,4,5,3,4,2,1,2,3,4,5]
+    },
+    {
+        name: "Jim Carrey",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jim_Carrey_2008.jpg/220px-Jim_Carrey_2008.jpg",
+        scores: [1,3,5,4,5,3,1,2,5,3,4]
+    },
+    {
+        name: "Alex Trebeck",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Horace_Newcomb_and_Alex_Trebek_%287268398640%29_%28cropped%29.jpg/220px-Horace_Newcomb_and_Alex_Trebek_%287268398640%29_%28cropped%29.jpg",
+        scores: [5,5,5,5,5,5,5,5,5,5]
     },
 ];
 
